@@ -1,7 +1,105 @@
 @import "../../../_variables";
 
-p {
-    font-size: 40px;
-    font-family: 'CINEMAXGothamTitling-Italic';
+.page {
+    margin: 0 auto;
+    max-width: 1440px;
+    max-height: 853px;
+    height: 100vh;
+
+    background-image: url(../../../assets/images/image_start.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: @md) {
+        padding: 0 72px;
+        width: calc(100vw - 144px);
+    }
+
+    @media (max-width: (@md - 1px)) {
+        padding: 24px;
+        width: calc(100vw - 48px);
+    }
+}
+
+.main-title {
+    width: min-content;
+    font-family: @CINEMAX;
+
+    @media (min-width: @md) {
+        font-size: 64px;
+        line-height: 70.4px;
+        padding-top: 211px;
+    }
+
+    @media (max-width: (@md - 1px)) {
+        font-size: calc(100vw / 12);
+    }
+
+    color: @primary-white;
+    text-shadow: 0px 4px 4px #00000040;
+    text-transform: uppercase;
+}
+
+.main-subtitle {
+    font-family: Gilroy;
+    font-weight: 500;
+    max-width: 509px;
+
+    @media (min-width: @md) {
+        font-size: 24px;
+        line-height: 26.4px;
+    }
+
+    @media (max-width: (@md - 1px)) {
+        font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (767 - 360)));
+        line-height: calc(18px + (26.4 - 18) * ((100vw - 360px) / (767 - 360)));
+    }
+
+    color: @primary-white;
+}
+
+.parallelogram {
+    width: 200px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: @Gilroy;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    transform: skew(170deg);
+    transition: all 0.3s ease-in;
+}
+
+.parallelogram-shadowed {
+    border-left: @green-primary 10px solid;
+    background-color: rgba(@green-primary, 0.4);
+    color: @primary-white;
+}
+
+.parallelogram-shadowed:hover {
+    background-color: @green-primary;
+    color: @primary-black;
+}
+
+.parallelogram-empty {
+    border: 2px solid @green-primary;
     color: @green-primary;
+}
+
+.parallelogram-empty:hover {
+    background-color: @green-primary;
+    color: @primary-black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

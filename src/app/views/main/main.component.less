@@ -4,12 +4,11 @@
 .page {
     margin: 0 auto;
     max-width: 1440px;
-    max-height: 853px;
-    height: 100vh;
+    height: 853px;
 
     background-color: @porsche-panton;
     background-image: url(../../../assets/images/image_start.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 
     @media (min-width: @md) {
@@ -127,8 +126,39 @@
     position: relative;
 }
 
+.socials {
+    margin-left: 24px;
+}
+
+a img {
+    cursor: pointer;
+}
+
 .row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.socials-line {
+    position: fixed;
+    
+    @media (min-height: 854px) and (max-width: @max) {
+        bottom: calc(100vh - 854px + 24px);
+        right: 24px;
+    }
+    @media (min-height: 854px) and (min-width: (@max + 1px)) {
+        bottom: calc(100vh - 854px + 24px);
+        right: calc((100vw - @max) / 2 + 24px);
+    }
+    
+    @media (max-height: 853px) and (max-width: @max) {
+        bottom: 24px;
+        right: 24px;
+    }
+    @media (max-height: 853px) and (min-width: (@max + 1px)) {
+        bottom: 24px;
+        right: calc((100vw - @max) / 2 + 24px);
+    }
+    
 }

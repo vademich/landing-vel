@@ -1,4 +1,5 @@
 @import "../../../_variables";
+@porsche-panton: #DF9D5B;
 
 .page {
     margin: 0 auto;
@@ -6,6 +7,7 @@
     max-height: 853px;
     height: 100vh;
 
+    background-color: @porsche-panton;
     background-image: url(../../../assets/images/image_start.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +44,7 @@
 
 .main-subtitle {
     font-family: Gilroy;
-    font-weight: 500;
+    font-weight: 400;
     max-width: 509px;
 
     @media (min-width: @md) {
@@ -74,6 +76,7 @@
     -webkit-box-sizing: border-box;
 
     transform: skew(170deg);
+    cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
@@ -84,7 +87,6 @@
 }
 
 .parallelogram-shadowed:hover {
-    background-color: @green-primary;
     color: @primary-black;
 }
 
@@ -94,8 +96,35 @@
 }
 
 .parallelogram-empty:hover {
-    background-color: @green-primary;
     color: @primary-black;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, @green-primary 0%, @green-primary 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+    transition: left 0.3s;
+}
+
+.wrapper:hover:before {
+    left: 0;
+}
+
+.parallelogram {
+    position: relative;
+}
+
+.parallelogram p {
+    position: relative;
 }
 
 .row {

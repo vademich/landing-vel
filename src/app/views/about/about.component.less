@@ -47,6 +47,9 @@
 
 .block-empty {
     height: 360px;
+    @media (min-width: 360px) and (max-width: 720px) {
+        height: 100vw;
+    }
 
     @media (max-width: 720px) {
         background: url(../../../assets/images/two_cyclists.jpg);

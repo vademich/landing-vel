@@ -9,6 +9,9 @@ import { AboutComponent } from './views/about/about.component';
 import { BikesComponent } from './views/bikes/bikes.component';
 import { Bike3dComponent } from './views/bike3d/bike3d.component';
 import { ServicesComponent } from './views/services/services.component';
+import { ButtonType1Component } from './components/button-type-1/button-type-1.component';
+import { ButtonType2Component } from './components/button-type-2/button-type-2.component';
+import { DetailsArrowComponent } from './components/details-arrow/details-arrow.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +21,10 @@ import { ServicesComponent } from './views/services/services.component';
         AboutComponent,
         BikesComponent,
         Bike3dComponent,
-        ServicesComponent
+        ServicesComponent,
+        ButtonType1Component,
+        ButtonType2Component,
+        DetailsArrowComponent
     ],
     imports: [
         BrowserModule

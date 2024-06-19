@@ -4,7 +4,7 @@
 
 .page {
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: calc(1440px - 2*72px);
     height: @banner-height;
 
     background-color: @porsche-panton;
@@ -60,73 +60,6 @@
     color: @primary-white;
 }
 
-.parallelogram {
-    width: 200px;
-    height: 49px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: @Gilroy;
-    font-weight: 700;
-    font-size: 18px;
-    text-transform: uppercase;
-    margin: 10px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-
-    transform: skew(170deg);
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-
-.parallelogram-shadowed {
-    border-left: @green-primary 10px solid;
-    background-color: rgba(@green-primary, 0.4);
-    color: @primary-white;
-}
-
-.parallelogram-shadowed:hover {
-    color: @primary-black;
-}
-
-.parallelogram-empty {
-    border: 2px solid @green-primary;
-    color: @green-primary;
-}
-
-.parallelogram-empty:hover {
-    color: @primary-black;
-}
-
-.wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-.wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(to right, @green-primary 0%, @green-primary 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
-    transition: left 0.3s;
-}
-
-.wrapper:hover:before {
-    left: 0;
-}
-
-.parallelogram {
-    position: relative;
-}
-
-.parallelogram p {
-    position: relative;
-}
-
 .socials {
     margin-left: 24px;
 }
@@ -142,24 +75,26 @@ a img {
 }
 
 .socials-line {
-    position: fixed;
-    
+    position: absolute;
+
     @media (min-height: (@banner-height + 1px)) and (max-width: @max) {
         bottom: calc(100vh - (@banner-height + 1px) + 24px);
         right: 24px;
     }
+
     @media (min-height: (@banner-height + 1px)) and (min-width: (@max + 1px)) {
         bottom: calc(100vh - (@banner-height + 1px) + 24px);
         right: calc((100vw - @max) / 2 + 24px);
     }
-    
+
     @media (max-height: @banner-height) and (max-width: @max) {
         bottom: 24px;
         right: 24px;
     }
+
     @media (max-height: @banner-height) and (min-width: (@max + 1px)) {
         bottom: 24px;
         right: calc((100vw - @max) / 2 + 24px);
     }
-    
+
 }

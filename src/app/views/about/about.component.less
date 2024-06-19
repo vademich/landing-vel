@@ -1,4 +1,120 @@
-p {
-    font-size: 40px;
-    font-family: "Gilroy";
+@import "../../../_variables";
+
+.page {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100vw;
+    height: 720px;
+    background: linear-gradient(180deg, #88ADD4 0%, #BCD2EA 39.63%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-block {
+    @media (min-width: 720px) {
+        background: url(../../../assets/images/two_cyclists.jpg);
+    }
+
+    background-size: 100%;
+}
+
+.block-text, .block-info {
+    height: 360px;
+}
+
+.block-bg-green {
+    background-color: @green-primary;
+}
+
+.block-info-margin {
+    margin: 0 24px;
+}
+.block-text-margin {
+    margin-top: 48px;
+    margin-left: 40px;
+    margin-right: 19px;
+}
+.block-text-text {
+    font-family: @Gilroy;
+    font-size: 16px;
+    color: @primary-black;
+    margin-top: 24px;
+    margin-bottom: 42px;
+}
+
+.block-empty {
+    height: 360px;
+
+    @media (max-width: 720px) {
+        background: url(../../../assets/images/two_cyclists.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.about-title {
+    font-family: @CINEMAX;
+
+    @media (max-width: (@md - 1px)) {
+        font-size: calc(24px + (40 - 24) * ((100vw - 360px) / (767 - 360)));
+    }
+
+    @media (min-width: @md) {
+        font-size: 40px;
+    }
+
+    text-transform: uppercase;
+    color: @primary-black;
+    margin-top: 46px;
+    margin-bottom: 24px;
+}
+
+.green-primary {
+    color: @green-primary;
+}
+
+.about-text {
+    font-family: @Gilroy;
+
+    @media (max-width: (@md - 1px)) {
+        font-size: calc(18px + (20 - 18) * ((100vw - 360px) / (767 - 360)));
+        line-height: calc(20px + (22 - 20) * ((100vw - 360px) / (767 - 360)));
+    }
+
+    @media (min-width: @md) {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    font-weight: 400;
+    color: @primary-black;
+    min-width: calc(360px - 2*24px);
+    margin-bottom: 32px;
+}
+
+.block-image {
+    height: 360px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.block-image-bicycle {
+    background-image: url(../../../assets/images/bicycle-block.jpg);
+}
+
+.block-image-cyclist {
+    background-image: url(../../../assets/images/cyclist-block.jpg);
+}
+
+.block-title {
+    font-family: @CINEMAX;
+    font-size: 32px;
+    line-height: 30.4px;
+    color: @primary-black;
+    text-transform: uppercase;
 }

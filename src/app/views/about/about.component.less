@@ -10,37 +10,49 @@
 
 .container {
     display: flex;
-    flex-direction: column;
-}
 
-.container-block {
-    // @media (min-width: 720px) {
-    //     background: url(../../../assets/images/two_cyclists.jpg);
-    //     background-size: 100%;
-    //     background-position: bottom;
-    //     background-repeat: no-repeat;
-    // }
+    @media (max-width: 1079px) {
+        flex-direction: column;
+    }
 
-    @media (min-width: 720px) {
-        // background: url(../../../assets/images/two_cyclists.jpg);
-        // background-size: 100%;
-        // background-position: bottom;
-        // background-repeat: no-repeat;
-        display: flex;
-        justify-content: space-between;
+    @media (min-width: 1080px) {
+        flex-wrap: wrap;
     }
 }
 
+.container-block {
+    @media (min-width: 720px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (min-width: 1080px) {
+        width: 720px;
+        height: 720px;
+        background: url(../../../assets/images/two_cyclists.jpg);
+        background-size: 100%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+}
 
 .container-block-bicycle {
     display: flex;
+
     @media (max-width: 719px) {
         flex-direction: column;
+    }
+
+    @media (min-width: 1080px) {
+        flex-direction: column;
+        width: calc(100vw - 720px);
+        max-width: 720px;
     }
 }
 
 .container-block-tracks {
     display: flex;
+
     @media (max-width: 719px) {
         flex-direction: column;
     }
@@ -61,6 +73,12 @@
 
 .block-bg-green {
     background-color: @green-primary;
+    max-width: 720px;
+
+    @media (min-width: 1080px) and (max-width: 1439px) {
+        width: 720px;
+        min-width: 720px;
+    }
 }
 
 .block-info-margin {
@@ -151,6 +169,11 @@
 
 .block-image-cyclist {
     background-image: url(../../../assets/images/cyclist-block.jpg);
+
+    @media (min-width: 1080px) {
+        width: calc(100vw - 720px);
+        max-width: 720px;
+    }
 }
 
 .block-title {

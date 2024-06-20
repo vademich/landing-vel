@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrl: './about.component.less'
+  styleUrls: ['./about.component.less', '../views-common-styles.less']
 })
 export class AboutComponent {
 

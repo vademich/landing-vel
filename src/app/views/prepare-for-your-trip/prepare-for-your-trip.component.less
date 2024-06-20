@@ -1,0 +1,35 @@
+@import '../../../_variables.less';
+
+.page {
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 1440px;
+    height: 740px;
+    background-image: url(../../../assets/images/bicycle-bg.jpg);
+
+    @media (max-width: (@lg - 1px)) {
+        background-position: bottom right;
+    }
+
+    @media (min-width: @lg) {
+        background-position: bottom right;
+    }
+
+    background-size: cover;
+}
+
+.wrapper {
+    max-width: 520px;
+    background-color: #00000080;
+    position: relative;
+
+    @media (max-width: (@md - 1px)) {
+        padding: 24px 24px;
+        top: calc(153px - 24px);
+    }
+
+    @media (min-width: @md) {
+        padding: 24px 72px;
+        top: calc(153px - 24px);
+    }
+}

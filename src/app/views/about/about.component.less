@@ -15,7 +15,6 @@
     margin: 0 auto;
     max-width: 1440px;
     width: 100vw;
-    height: 720px;
     background: linear-gradient(180deg, #88ADD4 0%, #BCD2EA 39.63%);
 }
 
@@ -136,46 +135,6 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-}
-
-.about-title {
-    font-family: @CINEMAX;
-
-    @media (max-width: (@md - 1px)) {
-        font-size: calc(24px + (40 - 24) * ((100vw - 360px) / (767 - 360)));
-    }
-
-    @media (min-width: 720px) {
-        font-size: 32px;
-    }
-
-    text-transform: uppercase;
-    color: @primary-black;
-    margin-bottom: 24px;
-}
-
-.green-primary {
-    color: @green-primary;
-}
-
-.about-text {
-    font-family: @Gilroy;
-    max-width: 578px;
-
-    @media (max-width: (@md - 1px)) {
-        font-size: calc(18px + (20 - 18) * ((100vw - 360px) / (767 - 360)));
-        line-height: calc(20px + (22 - 20) * ((100vw - 360px) / (767 - 360)));
-    }
-
-    @media (min-width: @md) {
-        font-size: 20px;
-        line-height: 22px;
-    }
-
-    font-weight: 400;
-    color: @primary-black;
-    min-width: calc(360px - 2*24px);
-    margin-bottom: 32px;
 }
 
 .block-image {

@@ -1,5 +1,16 @@
 @import "../../../_variables";
 
+@media (max-width: 1439px) {
+    .more-1440px {
+        display: none;
+    }
+}
+@media (min-width: 1440px) {
+    .less-1439px {
+        display: none;
+    }
+}
+
 .page {
     margin: 0 auto;
     max-width: 1440px;
@@ -48,6 +59,10 @@
         width: calc(100vw - 720px);
         max-width: 720px;
     }
+
+    @media (min-width: 1440px) {
+        flex-direction: row;
+    }
 }
 
 .container-block-tracks {
@@ -58,6 +73,10 @@
     }
 
     @media (min-width: 720px) {
+        flex-direction: row-reverse;
+    }
+
+    @media (min-width: 1440px) {
         flex-direction: row-reverse;
     }
 }
@@ -78,6 +97,10 @@
     @media (min-width: 1080px) and (max-width: 1439px) {
         width: 720px;
         min-width: 720px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 360px;
     }
 }
 
@@ -173,6 +196,10 @@
     @media (min-width: 1080px) {
         width: calc(100vw - 720px);
         max-width: 720px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 360px;
     }
 }
 
